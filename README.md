@@ -15,7 +15,7 @@
 
 | Projeto / Arte | Descrição | Pré-visualização |
 | :--- | :--- | :--- |
-| **Nome da Arte 1** | *-----------* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
+| **Nome da Arte 1** | *-----------* | `<img src=""C:\Users\ctrlp_4238f9a\Downloads\oioioioioioioioioioioioio\Sprite-0001-Sheet.ase"" width="200px">` |
 | **Nome da Arte 2** | *-----------* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
 
 ---
