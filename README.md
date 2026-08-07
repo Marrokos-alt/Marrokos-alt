@@ -45,3 +45,13 @@ Aqui estão as linguagens, motores e tecnologias com as quais interajo e estudo:
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO_AQUI&layout=compact&theme=forest&hide_border=true&bg_color=15,25,15&title_color=98FB98&text_color=A3C1AD" alt="Linguagens Mais Usadas" />
 </p>
+
+---
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SEU_USUARIO_AQUI/SEU_USUARIO_AQUI/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SEU_USUARIO_AQUI/SEU_USUARIO_AQUI/output/github-contribution-grid-snake.svg">
+    <img alt="Animação da cobrinha comendo os commits" src="https://raw.githubusercontent.com/SEU_USUARIO_AQUI/SEU_USUARIO_AQUI/output/github-contribution-grid-snake.svg">
+  </picture>
+</p>
