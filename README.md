@@ -10,16 +10,6 @@
 
 ---
 
-### 🎨 Galeria de Artes e Sprites Recentes
-> *Um espaço dedicado aos meus cultivos visuais mais recentes para jogos e projetos pessoais (focado em folhagens, árvores e natureza).*
-
-| Projeto / Arte | Descrição | Pré-visualização |
-| :--- | :--- | :--- |
-| **Nome da Arte 1** | *Primeiro sprite de folhagem* | ![Arte 1](imagens/arte1.png) |
-| **Nome da Arte 2** | *-----------* | ![Arte 2](imagens/arte2.png) |
-
----
-
 ### 🌿 Sobre Mim
 * 🎓 Atualmente sou **estudante** e focado na jornada de desenvolvimento de software e games de nível **Júnior**.
 * 🎨 Tenho facilidade e gosto pessoal por criar **sprites e assets visuais** para dar vida aos meus projetos.
