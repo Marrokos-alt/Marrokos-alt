@@ -15,8 +15,8 @@
 
 | Projeto / Arte | Descrição | Pré-visualização |
 | :--- | :--- | :--- |
-| **Nome da Arte 1** | *-----------* | `<img src="[https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400](https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400)" width="1200px">` |
-| **Nome da Arte 2** | *-----------* | `<img src="" width="200px">` |
+| **Nome da Arte 1** | *Primeiro sprite de folhagem* | <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400" width="200px"> |
+| **Nome da Arte 2** | *-----------* | <img src="" width="200px"> |
 
 ---
 
@@ -49,6 +49,12 @@ Aqui estão as linguagens, motores e tecnologias com as quais interajo e estudo:
 ---
 
 <p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO_AQUI&show_icons=true&theme=forest&hide_border=true&bg_color=15,25,15&title_color=98FB98&text_color=A3C1AD" alt="Estatísticas do GitHub de João Pedro" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO_AQUI&layout=compact&theme=forest&hide_border=true&bg_color=15,25,15&title_color=98FB98&text_color=A3C1AD" alt="Linguagens Mais Usadas" />
+</p>
   <img src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO_AQUI&show_icons=true&theme=forest&hide_border=true&bg_color=15,25,15&title_color=98FB98&text_color=A3C1AD" alt="Estatísticas do GitHub de João Pedro" />
 </p>
 
