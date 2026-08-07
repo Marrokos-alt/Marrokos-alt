@@ -10,6 +10,16 @@
 
 ---
 
+### 🎨 Galeria de Artes e Sprites Recentes
+> *Um espaço dedicado aos meus cultivos visuais mais recentes para jogos e projetos pessoais (focado em folhagens, árvores e natureza).*
+
+| Projeto / Arte | Descrição | Pré-visualização |
+| :--- | :--- | :--- |
+| **Nome da Arte 1** | *Descrição rápida do sprite ou cenário (ex: Árvore mística em Pixel Art)* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
+| **Nome da Arte 2** | *Descrição rápida do sprite ou cenário (ex: Folhagem para jogo em Godot)* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
+
+---
+
 ### 🌿 Sobre Mim
 * 🎓 Atualmente sou **estudante** e focado na jornada de desenvolvimento de software e games de nível **Júnior**.
 * 🎨 Tenho facilidade e gosto pessoal por criar **sprites e assets visuais** para dar vida aos meus projetos.
@@ -25,7 +35,7 @@ Aqui estão as linguagens, motores e tecnologias com as quais interajo e estudo:
 | Categoria | Tecnologias |
 | :--- | :--- |
 | **Game Engine** | `Godot` *(Explorando versões recentes)* |
-| **Linguagens** | `C#`, `C++`, `JavaScript`, `GML (GameMaker Language)`, `GDScript` |
+| **Linguagens** | `C#`, `C++`, `JavaScript`, `GML (GameMaker Language)` |
 | **Design & Arte** | Criação de Sprites 2D, Pixel Art & Arte Botânica |
 | **Controle de Versão** | `Git`, `GitHub` |
 
