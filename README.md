@@ -25,7 +25,7 @@ Aqui estão as linguagens, motores e tecnologias com as quais interajo e estudo:
 | Categoria | Tecnologias |
 | :--- | :--- |
 | **Game Engine** | `Godot` *(Explorando versões recentes)* |
-| **Linguagens** | `C#`, `C++`, `JavaScript`, `GML (GameMaker Language)` |
+| **Linguagens** | `C#`, `C++`, `JavaScript`, `GML (GameMaker Language)`, `GDScript` |
 | **Design & Arte** | Criação de Sprites 2D, Pixel Art & Arte Botânica |
 | **Controle de Versão** | `Git`, `GitHub` |
 
