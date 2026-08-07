@@ -15,8 +15,8 @@
 
 | Projeto / Arte | Descrição | Pré-visualização |
 | :--- | :--- | :--- |
-| **Nome da Arte 1** | *Descrição rápida do sprite ou cenário (ex: Árvore mística em Pixel Art)* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
-| **Nome da Arte 2** | *Descrição rápida do sprite ou cenário (ex: Folhagem para jogo em Godot)* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
+| **Nome da Arte 1** | *-----------* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
+| **Nome da Arte 2** | *-----------* | `<img src="LINK_DA_SUA_IMAGEM_AQUI" width="200px">` |
 
 ---
 
