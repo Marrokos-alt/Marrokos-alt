@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>🎮 Estudante e Desenvolvedor de Jogos Júnior</b><br>
-  🌿 Criador de Sprites • Pixel Artist • Apaixonado por Natureza
+  🌿 Criador de Sprites • Pixel Artist
 </p>
 
 <p align="center">
@@ -16,7 +16,6 @@
 - 🎓 Estudante focado em desenvolvimento de software e jogos.
 - 🎮 Desenvolvedor de Jogos em constante aprendizado.
 - 🎨 Gosto de criar sprites, pixel art e assets para meus projetos.
-- 🌲 Apaixonado por natureza, florestas, árvores e ambientações naturais.
 - 🧠 Sempre explorando novas linguagens, ferramentas e motores gráficos.
 
 ---
@@ -108,8 +107,7 @@
 ---
 
 <p align="center">
-🌿 Obrigado por visitar meu perfil! 🌿
+🌿 Obrigado por visitar meu perfil!
 <br><br>
-Que seu código cresça forte como uma floresta. 🌳
 </p>
 
