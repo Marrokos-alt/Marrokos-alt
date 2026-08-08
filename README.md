@@ -71,7 +71,7 @@
 ## 🔥 Sequência de Contribuições
 
 <p align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com?user=SEU_USUARIO_AQUI&theme=dark&hide_border=true&ring=98FB98&fire=7CFC00&currStreakLabel=98FB98" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=Marrokos-alt&theme=dark&hide_border=true&ring=98FB98&fire=7CFC00&currStreakLabel=98FB98" />
 </p>
 
 ---
