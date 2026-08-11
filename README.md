@@ -1,4 +1,4 @@
-# 🌱 Olá, eu sou o João Pedro!
+# 🌱 oi tudo bém
 
 <p align="center">
   <b>🎮 Estudante e Desenvolvedor de Jogos Júnior</b><br>
