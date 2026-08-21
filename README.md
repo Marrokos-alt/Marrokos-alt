@@ -1,4 +1,4 @@
-# 🌱 oi tudo bém
+# 🌱 Olá tudo bem
 
 <p align="center">
   <b>🎮 Estudante e Desenvolvedor de Jogos Júnior</b><br>
@@ -102,6 +102,65 @@
 
 <!-- Adicione aqui LinkedIn, Instagram ou Portfólio caso tenha -->
 
+</p>
+
+---
+
+## 🌱 Meus Projetos
+
+<p align="center">
+  <i>Alguns dos projetos que estou desenvolvendo e explorando.</i>
+</p>
+
+### 🎮 Projeto 1 — Nome do Projeto
+
+> 🟢 Em desenvolvimento
+
+**Descrição:**  
+Uma breve descrição do seu jogo ou projeto. Explique em algumas linhas o que ele é e qual é a ideia principal.
+
+**🛠️ Tecnologias:**  
+`Godot` `C#` `Pixel Art`
+
+**🔗 Links:**
+- 🎮 [Jogar / Download](COLOQUE_O_LINK_AQUI)
+- 💻 [Código-fonte](COLOQUE_O_LINK_DO_REPOSITORIO_AQUI)
+
+---
+
+### 🌿 Projeto 2 — Nome do Projeto
+
+> 🟡 Em desenvolvimento
+
+**Descrição:**  
+Descrição do segundo projeto.
+
+**🛠️ Tecnologias:**  
+`Godot` `GDScript` `Pixel Art`
+
+**🔗 Links:**
+- 🎮 [Jogar / Download]("C:\Users\JP Marochitte\Downloads\cna-catP\Sem título.blend")
+- 💻 [Código-fonte](COLOQUE_O_LINK_DO_REPOSITORIO_AQUI)
+
+---
+
+### 🍃 Projeto 3 — Nome do Projeto
+
+> 🔵 Planejado
+
+**Descrição:**  
+Descrição do projeto que você pretende desenvolver.
+
+**🛠️ Tecnologias:**  
+`C++` `Godot`
+
+**🔗 Links:**
+- 💻 [Código-fonte](COLOQUE_O_LINK_DO_REPOSITORIO_AQUI)
+
+---
+
+<p align="center">
+  🌱 <b>Mais projetos em breve...</b>
 </p>
 
 ---
