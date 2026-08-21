@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c25su2tqqulam"]
+
+[ext_resource type="Script" uid="uid://bhkbma5vbduht" path="res://player3.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cmuowk5v54op6" path="res://pivo.gd" id="2_onrkg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_57qmd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1056096353]
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1171350681]
+mesh = SubResource("CapsuleMesh_57qmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=656768399]
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="Pivo" type="SpringArm3D" parent="." unique_id=1906732491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5972607, 0.061228275)
+spring_length = 6.0
+script = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="Pivo" unique_id=5767806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.875283)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1294913160]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer" unique_id=1428148512]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(602.75, 337.75)
+scale = Vector2(1206.5, 676.5)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="Timer" type="Timer" parent="." unique_id=1929196387]
+wait_time = 0.2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

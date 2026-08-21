@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://m3c2j8xr7ivg"]
+
+[ext_resource type="PackedScene" uid="uid://c25su2tqqulam" path="res://player.tscn" id="1_a202f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(38.746704, 1, 41.642456)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_noarx"]
+data = PackedVector3Array(-19.3734, 0.5, 20.8212, 19.3734, 0.5, 20.8212, -19.3734, -0.5, 20.8212, 19.3734, 0.5, 20.8212, 19.3734, -0.5, 20.8212, -19.3734, -0.5, 20.8212, 19.3734, 0.5, -20.8212, -19.3734, 0.5, -20.8212, 19.3734, -0.5, -20.8212, -19.3734, 0.5, -20.8212, -19.3734, -0.5, -20.8212, 19.3734, -0.5, -20.8212, 19.3734, 0.5, 20.8212, 19.3734, 0.5, -20.8212, 19.3734, -0.5, 20.8212, 19.3734, 0.5, -20.8212, 19.3734, -0.5, -20.8212, 19.3734, -0.5, 20.8212, -19.3734, 0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, -0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, -0.5, 20.8212, -19.3734, -0.5, -20.8212, 19.3734, 0.5, 20.8212, -19.3734, 0.5, 20.8212, 19.3734, 0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, 0.5, -20.8212, 19.3734, 0.5, -20.8212, -19.3734, -0.5, 20.8212, 19.3734, -0.5, 20.8212, -19.3734, -0.5, -20.8212, 19.3734, -0.5, 20.8212, 19.3734, -0.5, -20.8212, -19.3734, -0.5, -20.8212)
+
+[sub_resource type="Environment" id="Environment_yf5fn"]
+background_mode = 1
+background_color = Color(0, 0, 0.21176471, 1)
+
+[node name="Node3D" type="Node3D" unique_id=269831685]
+
+[node name="Chao" type="MeshInstance3D" parent="." unique_id=1814283453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0092163, 0, -10.404602)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Chao" unique_id=1971715858]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D" unique_id=412971193]
+shape = SubResource("ConcavePolygonShape3D_noarx")
+
+[node name="CharacterBody3D" parent="." unique_id=1056096353 instance=ExtResource("1_a202f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9495478, 1.5, -6.0103464)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1816407493]
+environment = SubResource("Environment_yf5fn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1153769185]
+transform = Transform3D(1, 0, 0, 0, 0.5126367, 0.8586057, 0, -0.8586057, 0.5126367, -17.39981, 39.841225, 37.188377)
+shadow_enabled = true

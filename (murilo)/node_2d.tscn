@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b1rahts60e3su"]
+
+[ext_resource type="AudioStream" uid="uid://dg4x62n4sc7e6" path="res://sspsurvival-the-voices-of-birds-in-the-forest-7715.mp3" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://7rt1unowtax8" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="AudioStream" uid="uid://cumuxtaeert1a" path="res://freesound_community-bells-1-72261.mp3" id="3_epypp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(190, 45)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=877967357]
+script = ExtResource("1_epypp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=122480909]
+stream = ExtResource("1_0e48y")
+autoplay = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1532793608]
+position = Vector2(554, 389)
+input_pickable = true
+
+[node name="Label" type="Label" parent="StaticBody2D" unique_id=1445253673]
+offset_left = -79.0
+offset_top = -12.0
+offset_right = 81.0
+offset_bottom = 29.0
+text = "Play"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=586168348]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1448430887]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(577.25, 325.75)
+scale = Vector2(1155.5, 652.5)
+mesh = SubResource("BoxMesh_0e48y")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=611261028]
+stream = ExtResource("3_epypp")
+volume_db = 1.0
+pitch_scale = 1.5
+
+[connection signal="input_event" from="StaticBody2D" to="." method="_on_static_body_2d_input_event"]
+[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_exited"]
