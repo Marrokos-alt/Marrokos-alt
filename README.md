@@ -117,7 +117,7 @@
 > 🟢 Em desenvolvimento
 
 **Descrição:**  
-Uma breve descrição do seu jogo ou projeto. Explique em algumas linhas o que ele é e qual é a ideia principal.
+Esse projeto é um jogo inspirado em Elder Ring. Um semi mundo aberto como inimigos e chefões
 
 **🛠️ Tecnologias:**  
 `Godot` `GDScript` `Libresprite`
