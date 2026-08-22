@@ -120,7 +120,7 @@
 Esse projeto é um jogo inspirado em Elder Ring. Um semi mundo aberto como inimigos e chefões
 
 **🛠️ Tecnologias:**  
-`Godot` `GDScript` `Libresprite`
+`Godot 4.7.2` `GDScript` `Libresprite`
 
 **🔗 Links:**
 - 🎮 [Jogar / Download (não disponivel)](COLOQUE_O_LINK_AQUI)
