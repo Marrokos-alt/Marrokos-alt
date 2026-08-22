@@ -120,7 +120,7 @@
 Uma breve descrição do seu jogo ou projeto. Explique em algumas linhas o que ele é e qual é a ideia principal.
 
 **🛠️ Tecnologias:**  
-`Godot` `C#` `Pixel Art`
+`Godot` `GDScript` `Libresprite`
 
 **🔗 Links:**
 - 🎮 [Jogar / Download](COLOQUE_O_LINK_AQUI)
