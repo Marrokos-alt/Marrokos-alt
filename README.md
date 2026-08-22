@@ -13,7 +13,7 @@
 
 ## 🌿 Sobre Mim
 
-- 🎓 Estudante focado em desenvolvimento de software e jogos.
+- 🎓 Estudante focado em desenvolvimento de jogos.
 - 🎮 Desenvolvedor de Jogos em constante aprendizado.
 - 🎨 Gosto de criar sprites, pixel art e assets para meus projetos.
 - 🧠 Sempre explorando novas linguagens, ferramentas e motores gráficos.
@@ -36,6 +36,7 @@
 - C++
 - JavaScript
 - GML (GameMaker Language)
+- GDScript
 
 ### Arte
 - 🎨 Pixel Art
@@ -55,7 +56,6 @@
 - 🍃 Pixel Art
 - 🌳 Design de Cenários
 - 🧠 Lógica de Programação
-- 💻 Desenvolvimento de Software
 
 ---
 
@@ -123,7 +123,7 @@ Uma breve descrição do seu jogo ou projeto. Explique em algumas linhas o que e
 `Godot` `GDScript` `Libresprite`
 
 **🔗 Links:**
-- 🎮 [Jogar / Download](COLOQUE_O_LINK_AQUI)
+- 🎮 [Jogar / Download (não disponivel)](COLOQUE_O_LINK_AQUI)
 - 💻 [Código-fonte](https://github.com/Marrokos-alt/Marrokos-alt/tree/main/(murilo))
 
 ---
