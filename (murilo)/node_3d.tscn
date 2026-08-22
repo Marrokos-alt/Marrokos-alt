@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://m3c2j8xr7ivg"]
 
 [ext_resource type="PackedScene" uid="uid://c25su2tqqulam" path="res://player.tscn" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://dp4el8nn63dbv" path="res://inimigo1.tscn" id="2_noarx"]
+
+[sub_resource type="Environment" id="Environment_yf5fn"]
+background_mode = 1
+background_color = Color(0, 0, 0.21176471, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_kcsye"]
+vertices = PackedVector3Array(-25.882616, 1, -30.72583, -25.882616, 1, 10.02417, 11.867384, 1, 10.02417, 11.867384, 1, -30.72583)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
 size = Vector3(38.746704, 1, 41.642456)
@@ -8,20 +17,7 @@ size = Vector3(38.746704, 1, 41.642456)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_noarx"]
 data = PackedVector3Array(-19.3734, 0.5, 20.8212, 19.3734, 0.5, 20.8212, -19.3734, -0.5, 20.8212, 19.3734, 0.5, 20.8212, 19.3734, -0.5, 20.8212, -19.3734, -0.5, 20.8212, 19.3734, 0.5, -20.8212, -19.3734, 0.5, -20.8212, 19.3734, -0.5, -20.8212, -19.3734, 0.5, -20.8212, -19.3734, -0.5, -20.8212, 19.3734, -0.5, -20.8212, 19.3734, 0.5, 20.8212, 19.3734, 0.5, -20.8212, 19.3734, -0.5, 20.8212, 19.3734, 0.5, -20.8212, 19.3734, -0.5, -20.8212, 19.3734, -0.5, 20.8212, -19.3734, 0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, -0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, -0.5, 20.8212, -19.3734, -0.5, -20.8212, 19.3734, 0.5, 20.8212, -19.3734, 0.5, 20.8212, 19.3734, 0.5, -20.8212, -19.3734, 0.5, 20.8212, -19.3734, 0.5, -20.8212, 19.3734, 0.5, -20.8212, -19.3734, -0.5, 20.8212, 19.3734, -0.5, 20.8212, -19.3734, -0.5, -20.8212, 19.3734, -0.5, 20.8212, 19.3734, -0.5, -20.8212, -19.3734, -0.5, -20.8212)
 
-[sub_resource type="Environment" id="Environment_yf5fn"]
-background_mode = 1
-background_color = Color(0, 0, 0.21176471, 1)
-
 [node name="Node3D" type="Node3D" unique_id=269831685]
-
-[node name="Chao" type="MeshInstance3D" parent="." unique_id=1814283453]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0092163, 0, -10.404602)
-mesh = SubResource("BoxMesh_g4v7s")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Chao" unique_id=1971715858]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D" unique_id=412971193]
-shape = SubResource("ConcavePolygonShape3D_noarx")
 
 [node name="CharacterBody3D" parent="." unique_id=1056096353 instance=ExtResource("1_a202f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9495478, 1.5, -6.0103464)
@@ -32,3 +28,27 @@ environment = SubResource("Environment_yf5fn")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1153769185]
 transform = Transform3D(1, 0, 0, 0, 0.5126367, 0.8586057, 0, -0.8586057, 0.5126367, -17.39981, 39.841225, 37.188377)
 shadow_enabled = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=266091856]
+navigation_mesh = SubResource("NavigationMesh_kcsye")
+
+[node name="Chao" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1814283453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0092163, 0, -10.404602)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Chao" unique_id=1971715858]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Chao/StaticBody3D" unique_id=412971193]
+shape = SubResource("ConcavePolygonShape3D_noarx")
+
+[node name="CharacterBody3D2" parent="." unique_id=1850467429 instance=ExtResource("2_noarx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.351701, 1.4672313, -13.120522)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1159048955]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2005036864]
+shape = SubResource("ConcavePolygonShape3D_noarx")
