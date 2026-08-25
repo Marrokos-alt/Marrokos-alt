@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://c25su2tqqulam"]
+
+[ext_resource type="Script" uid="uid://bhkbma5vbduht" path="res://player3.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cmuowk5v54op6" path="res://pivo.gd" id="2_onrkg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrkg"]
+transparency = 1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_57qmd"]
+material = SubResource("StandardMaterial3D_onrkg")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onrkg"]
+bg_color = Color(0.10747974, 0.10747973, 0.107479684, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3pqv"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kcsye"]
+size = Vector3(1, 1.2319336, 4.703125)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kcsye"]
+size = Vector3(0.171875, 0.2322998, 4.5027466)
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1056096353 groups=["Player"]]
+collision_mask = 5
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1171350681]
+mesh = SubResource("CapsuleMesh_57qmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=656768399]
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="Pivo" type="SpringArm3D" parent="." unique_id=1906732491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5972607, 0.061228275)
+spring_length = 6.0
+script = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="Pivo" unique_id=5767806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.875283)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1294913160]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=2065039605]
+offset_left = 23.0
+offset_top = 591.0
+offset_right = 291.0
+offset_bottom = 625.0
+theme_override_styles/background = SubResource("StyleBoxFlat_onrkg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_i3pqv")
+value = 50.0
+show_percentage = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer" unique_id=1428148512]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(602.75, 337.75)
+scale = Vector2(1206.5, 676.5)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="Timer" type="Timer" parent="." unique_id=1929196387]
+wait_time = 0.2
+
+[node name="Invencivel" type="Timer" parent="." unique_id=113359803]
+wait_time = 1.5
+
+[node name="Piscar" type="Timer" parent="." unique_id=452703659]
+wait_time = 0.1
+
+[node name="Area3D" type="Area3D" parent="." unique_id=601612638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.3426657)
+collision_layer = 255
+collision_mask = 255
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=966971557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1159668, 2.2539063)
+shape = SubResource("BoxShape3D_kcsye")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=2081213294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016624749, 0.19835567, 2.1963086)
+visible = false
+mesh = SubResource("BoxMesh_kcsye")
+
+[node name="Atk" type="Timer" parent="Area3D" unique_id=4512250]
+wait_time = 1.5
+
+[node name="sumir" type="Timer" parent="Area3D" unique_id=1332587122]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Invencivel" to="." method="_on_invencivel_timeout"]
+[connection signal="timeout" from="Piscar" to="." method="_on_piscar_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="Area3D/Atk" to="." method="_on_atk_timeout"]
+[connection signal="timeout" from="Area3D/sumir" to="." method="_on_sumir_timeout"]
