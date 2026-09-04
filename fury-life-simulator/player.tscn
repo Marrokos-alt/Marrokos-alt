@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://6cy5dorwpsib"]
+
+[ext_resource type="Script" uid="uid://dq6nphjleq47g" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vne2v"]
+
+[node name="player" type="CharacterBody2D" unique_id=617808360]
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1973498382]
+position = Vector2(4.7683716e-07, -2.3841858e-07)
+scale = Vector2(35.000004, 29.500002)
+mesh = SubResource("CapsuleMesh_vne2v")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1400313479]
+visible = false
+polygon = PackedVector2Array(14, -23, 16, -21, 17, -19, 17, -16, 17, 15, 17, 18, 16, 20, 14, 23, 9, 27, 3, 29, -2, 29, -9, 27, -14, 22, -17, 16, -17, -4, -17, -18, -13, -24, -7, -28, 0, -29, 8, -27, 15, -22)
+
+[node name="Timer" type="Timer" parent="." unique_id=1492434355]
+
+[node name="Timer2" type="Timer" parent="." unique_id=1491533743]
+wait_time = 0.25
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1950649905]
+
+[node name="Timer3" type="Timer" parent="." unique_id=1332869065]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
