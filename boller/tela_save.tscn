@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://gqkn565ir0vd"]
+
+[ext_resource type="Script" uid="uid://d3d4wdunpxb5m" path="res://tela_save.gd" id="1_1qgbl"]
+[ext_resource type="AudioStream" uid="uid://cgahrigsqrmcn" path="res://audio/arpmedia-sad-sad-music-577848.mp3" id="2_ojdxr"]
+[ext_resource type="Texture2D" uid="uid://cb3vrvtm7rllm" path="res://sprites/back-1.png" id="3_2wqvl"]
+[ext_resource type="Texture2D" uid="uid://dbmsfd565ag1v" path="res://sprites/back-2.png" id="4_ftr1m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5gqkd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojdxr"]
+bg_color = Color(0.032967977, 0.032967992, 0.03296798, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4293315, 0.7502355, 0.85645187, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5od5y"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.20437708, 0.46123898, 0.54180753, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5od5y"]
+size = Vector2(70, 28)
+
+[node name="tela_save" type="Node2D" unique_id=1038609236]
+script = ExtResource("1_1qgbl")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1237991111]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(578.25, 324.74997)
+scale = Vector2(1157.5, 650.49994)
+mesh = SubResource("BoxMesh_5gqkd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1831275363]
+stream = ExtResource("2_ojdxr")
+autoplay = true
+
+[node name="save_1" type="Button" parent="." unique_id=1361728563]
+offset_left = 120.0
+offset_top = 88.0
+offset_right = 762.0
+offset_bottom = 225.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojdxr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5od5y")
+
+[node name="save_2" type="Button" parent="." unique_id=1452222799]
+offset_left = 120.0
+offset_top = 264.0
+offset_right = 762.0
+offset_bottom = 401.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojdxr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5od5y")
+
+[node name="save_3" type="Button" parent="." unique_id=467850728]
+offset_left = 120.0
+offset_top = 434.0
+offset_right = 762.0
+offset_bottom = 571.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojdxr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5od5y")
+
+[node name="Back1" type="Sprite2D" parent="." unique_id=59284089]
+position = Vector2(1102, 622)
+scale = Vector2(3, 3)
+texture = ExtResource("3_2wqvl")
+
+[node name="Back2" type="Sprite2D" parent="." unique_id=1196303867]
+visible = false
+position = Vector2(1102, 622)
+scale = Vector2(3, 3)
+texture = ExtResource("4_ftr1m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=608752484]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=344218635]
+position = Vector2(1101, 622)
+shape = SubResource("RectangleShape2D_5od5y")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1260300072]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(578.25, 324.74997)
+scale = Vector2(1157.5, 650.49994)
+mesh = SubResource("BoxMesh_5gqkd")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_exited"]

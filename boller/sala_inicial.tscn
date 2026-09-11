@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://n8gyclvx2b17"]
+
+[ext_resource type="Texture2D" uid="uid://duewrd7wvcnsh" path="res://sprites/place_holder_2.png" id="1_lrehq"]
+[ext_resource type="Texture2D" uid="uid://bru2ktfv4pybw" path="res://sprites/place_holder.png" id="2_8y6dq"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2hlup"]
+vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
+agent_radius = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fnilj"]
+texture = ExtResource("1_lrehq")
+0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_2hlup")
+
+[sub_resource type="TileSet" id="TileSet_q868a"]
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_fnilj")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2snfu"]
+texture = ExtResource("2_8y6dq")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_5od5y"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2snfu")
+
+[node name="sala_inicial" type="Node2D" unique_id=163382031]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=514009995]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_q868a")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=427632724]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_5od5y")

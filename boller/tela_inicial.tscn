@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dsact8rwkb4xc"]
+
+[ext_resource type="Script" uid="uid://lmujli7pxu38" path="res://tela_inicial.gd" id="1_8bm7t"]
+[ext_resource type="Texture2D" uid="uid://7u0kduehipho" path="res://sprites/start-1.png" id="1_g50o1"]
+[ext_resource type="Texture2D" uid="uid://c2htolhwfqp4c" path="res://sprites/start-2.png" id="2_8bm7t"]
+[ext_resource type="AudioStream" uid="uid://cgahrigsqrmcn" path="res://audio/arpmedia-sad-sad-music-577848.mp3" id="4_w63eu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5od5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5od5y"]
+size = Vector2(147, 42.999985)
+
+[node name="tela_inicial" type="Node2D" unique_id=669809202]
+script = ExtResource("1_8bm7t")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1638045027]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(578.25, 324.74997)
+scale = Vector2(1157.5, 650.49994)
+mesh = SubResource("BoxMesh_5od5y")
+
+[node name="Start1" type="Sprite2D" parent="." unique_id=841046819]
+position = Vector2(701, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("1_g50o1")
+
+[node name="Start2" type="Sprite2D" parent="." unique_id=1400275135]
+visible = false
+position = Vector2(701, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("2_8bm7t")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=432814921]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(579, 331.00003)
+scale = Vector2(1157.5, 650.49994)
+mesh = SubResource("BoxMesh_5od5y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1559960398]
+scale = Vector2(1, 0.99999994)
+collision_layer = 65535
+collision_mask = 65535
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=254540047]
+position = Vector2(581.5, 324.50003)
+shape = SubResource("RectangleShape2D_5od5y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=494892184]
+stream = ExtResource("4_w63eu")
+autoplay = true
+
+[connection signal="input_event" from="StaticBody2D" to="." method="_on_static_body_2d_input_event"]
+[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
